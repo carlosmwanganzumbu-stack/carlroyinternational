@@ -1,0 +1,771 @@
+
+/* =========================================
+   CARLROY INTERNATIONAL
+   OFFICIAL DESIGN SYSTEM - VERSION 3.0
+   PREMIUM DARK + STICKY HEADER
+========================================= */
+
+/* 1. VARIABLES PRINCIPALES */
+
+:root {
+    --navy: #07152E;
+    --navy-dark: #020817;
+    --navy-light: #102442;
+    --blue: #0878F9;
+    --blue-light: #48A0FF;
+    --white: #FFFFFF;
+    --silver: #A8B5C7;
+    --light: #F5F7FA;
+    --dark-text: #101828;
+    --gray-text: #64748B;
+    --border: rgba(168, 181, 199, 0.15);
+
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+/* 2. RÉINITIALISATION */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--white);
+    background: var(--navy);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.section h2,
+.section h3 {
+    color: var(--white);
+}
+
+.section p {
+    color: var(--silver);
+}
+
+/* 3. EN-TÊTE PREMIUM STICKY */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(7, 21, 46, 0.82);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    color: var(--white);
+
+    border-bottom: 1px solid rgba(168, 181, 199, 0.12);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Apparence lorsque le visiteur défile */
+
+.header.scrolled {
+    background: rgba(2, 8, 23, 0.97);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+    border-bottom: 1px solid rgba(8, 120, 249, 0.25);
+}
+
+/* 4. BARRE DE NAVIGATION */
+
+.navbar {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+/* 5. LOGO CARLROY */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.logo-mark {
+    width: 43px;
+    height: 43px;
+
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue-light)
+    );
+
+    color: var(--white);
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    font-family: var(--heading-font);
+    font-size: 25px;
+    font-weight: 800;
+
+    box-shadow: 0 5px 20px rgba(8, 120, 249, 0.3);
+}
+
+.logo strong {
+    color: var(--white);
+    font-family: var(--heading-font);
+    letter-spacing: 1px;
+}
+
+/* Compatibilité avec les anciens noms du logo */
+
+.logo-symbol {
+    width: 43px;
+    height: 43px;
+
+    background: var(--blue);
+    color: var(--white);
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    font-family: var(--heading-font);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    font-family: var(--heading-font);
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.logo-text small {
+    font-size: 9px;
+    color: var(--silver);
+    letter-spacing: 2px;
+}
+
+/* 6. NAVIGATION PRINCIPALE */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navigation a {
+    color: #D4DCE8;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--blue-light);
+}
+
+/* 7. BOUTONS DE L'EN-TÊTE */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.language-button,
+.menu-button {
+    background: rgba(8, 120, 249, 0.08);
+
+    border: 1px solid rgba(8, 120, 249, 0.6);
+
+    color: var(--white);
+
+    padding: 9px 15px;
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.language-button:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+
+    box-shadow: 0 0 18px rgba(8, 120, 249, 0.3);
+}
+
+.menu-button {
+    display: none;
+    font-size: 20px;
+}
+
+/* 8. SECTION HERO */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(8, 120, 249, 0.28),
+            transparent 38%
+        ),
+        linear-gradient(
+            125deg,
+            #07152E,
+            #102B52,
+            #07152E
+        );
+
+    min-height: 610px;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--white);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.hero-label,
+.section-label {
+    display: inline-block;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+
+    color: var(--blue-light);
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: var(--heading-font);
+
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.12;
+    font-weight: 800;
+
+    max-width: 850px;
+
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    max-width: 650px;
+
+    color: #C5D0E0;
+    font-size: 16px;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* 9. BOUTONS DU SITE */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 23px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        #0064D9
+    );
+
+    color: var(--white);
+
+    box-shadow: 0 5px 20px rgba(8, 120, 249, 0.2);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 30px rgba(8, 120, 249, 0.35);
+    transform: translateY(-4px);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--navy);
+}
+
+/* 10. PRÉSENTATION */
+
+.intro {
+    background: var(--navy);
+
+    text-align: center;
+
+    max-width: 900px;
+    margin: auto;
+
+    padding: 100px 5%;
+}
+
+.intro h2,
+.section-heading h2,
+.vision h2 {
+    font-family: var(--heading-font);
+
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.3;
+
+    margin-bottom: 22px;
+}
+
+.intro p {
+    max-width: 760px;
+
+    margin: auto auto 25px;
+
+    color: var(--silver);
+    font-size: 15px;
+}
+
+.text-link {
+    color: var(--blue-light);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* 11. SECTIONS DES MARQUES */
+
+.brands {
+    background: #081A34;
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.brand-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.brand-card {
+    background: linear-gradient(
+        145deg,
+        #102442,
+        #0A1931
+    );
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    transition: all 0.35s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--blue);
+
+    box-shadow: 0 15px 40px rgba(8, 120, 249, 0.15);
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(8, 120, 249, 0.15);
+
+    color: var(--blue-light);
+
+    border-radius: 8px;
+
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.brand-card h2,
+.brand-card h3 {
+    color: var(--white);
+
+    font-family: var(--heading-font);
+
+    margin-bottom: 15px;
+}
+
+.brand-card p {
+    color: var(--silver);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 12. VISION */
+
+.vision,
+.vision-section {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(8, 120, 249, 0.15),
+            transparent 65%
+        ),
+        #040D1C;
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+.vision-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.vision h2,
+.vision-section h2 {
+    font-family: var(--heading-font);
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    color: var(--white);
+
+    margin-bottom: 22px;
+}
+
+.vision p,
+.vision-section p {
+    color: var(--silver);
+    font-size: 15px;
+    line-height: 1.8;
+
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+/* 13. PIED DE PAGE */
+
+.footer {
+    background: var(--navy-dark);
+
+    color: var(--white);
+
+    padding: 35px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.footer h3 {
+    font-family: var(--heading-font);
+    font-size: 15px;
+}
+
+.footer p {
+    color: var(--silver);
+    font-size: 12px;
+}
+
+/* 14. ANIMATIONS */
+
+.navigation a,
+.btn,
+.brand-card,
+.language-button {
+    transition-duration: 0.3s;
+}
+
+/* =========================================
+   15. RESPONSIVE - TABLETTES
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+}
+
+/* =========================================
+   16. RESPONSIVE - TÉLÉPHONES
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 72px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+
+        width: 100%;
+
+        background: #07152E;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 25px 5%;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero-content {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .intro {
+        padding: 70px 5%;
+    }
+
+    .brands {
+        padding: 70px 0;
+    }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-card {
+        padding: 27px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* =========================================
+   FIN DU DESIGN SYSTEM
+   CARLROY INTERNATIONAL
+========================================= */
+
+/* LOGO OFFICIEL CARLROY */
+
+.logo-image {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    display: block;
+}
+
+/* =================================
+   CARLROY - CONTACT FORM
+================================= */
+
+.contact-form-section {
+    background: #F5F7FA;
+}
+
+.contact-form {
+    max-width: 760px;
+    margin: 45px auto 0;
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(7, 21, 46, 0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #07152E;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D8DEE8;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #101828;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0878F9;
+    box-shadow: 0 0 0 3px rgba(8, 120, 249, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+
+    .contact-form {
+        padding: 22px 16px;
+        margin-top: 30px;
+    }
+
+}
