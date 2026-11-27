@@ -1,0 +1,383 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contactez CARLROY INTERNATIONAL pour vos projets, partenariats et collaborations.">
+
+    <title>Contact | CARLROY INTERNATIONAL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo-carlroy.png"
+                 alt="Logo CARLROY INTERNATIONAL"
+                 class="logo-image">
+
+            <span class="logo-text">
+                <strong>CARLROY</strong>
+                <small>INTERNATIONAL</small>
+            </span>
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+            <a href="about.html" data-fr="À propos" data-en="About">À propos</a>
+            <a href="activities.html" data-fr="Activités" data-en="Activities">Activités</a>
+            <a href="brands.html" data-fr="Nos marques" data-en="Our brands">Nos marques</a>
+            <a href="news.html" data-fr="Actualités" data-en="News">Actualités</a>
+            <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+        </nav>
+
+        <button id="languageButton" class="language-button">EN</button>
+
+        <button id="menuButton"
+                class="menu-button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false">☰</button>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container hero-content">
+
+            <p class="hero-label"
+               data-fr="ENTRONS EN CONTACT"
+               data-en="GET IN TOUCH">
+                ENTRONS EN CONTACT
+            </p>
+
+            <h1 data-fr="Parlons de l'avenir."
+                data-en="Let's talk about the future.">
+                Parlons de l'avenir.
+            </h1>
+
+            <p data-fr="Une idée, une proposition ou une opportunité de collaboration ? Nous serions heureux d'échanger avec vous."
+               data-en="An idea, a proposal or a collaboration opportunity? We would be glad to hear from you.">
+                Une idée, une proposition ou une opportunité de collaboration ? Nous serions heureux d'échanger avec vous.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT INFORMATION -->
+
+    <section class="section">
+        <div class="container">
+
+            <p class="section-label"
+               data-fr="01 — INFORMATIONS DE CONTACT"
+               data-en="01 — CONTACT INFORMATION">
+                01 — INFORMATIONS DE CONTACT
+            </p>
+
+            <h2 data-fr="Entrons en contact"
+                data-en="Get in touch">
+                Entrons en contact
+            </h2>
+
+            <div class="brand-grid">
+
+                <article class="brand-card">
+
+                    <p class="section-label">EMAIL</p>
+
+                    <h2 data-fr="Courriel professionnel"
+                        data-en="Business email">
+                        Courriel professionnel
+                    </h2>
+
+                    <p>
+                        <a href="mailto:carlosmwanganzumbu@gmail.com">
+                            carlosmwanganzumbu@gmail.com
+                        </a>
+                    </p>
+
+                </article>
+
+                <article class="brand-card">
+
+                    <p class="section-label">LOCATION</p>
+
+                    <h2 data-fr="Présence"
+                        data-en="Location">
+                        Présence
+                    </h2>
+
+                    <p data-fr="République démocratique du Congo — Kinshasa."
+                       data-en="Democratic Republic of the Congo — Kinshasa.">
+                        République démocratique du Congo — Kinshasa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT FORM -->
+
+    <section class="section contact-form-section">
+
+        <div class="container">
+
+            <p class="section-label"
+               data-fr="02 — ENVOYER UN MESSAGE"
+               data-en="02 — SEND A MESSAGE">
+                02 — ENVOYER UN MESSAGE
+            </p>
+
+            <h2 data-fr="Envoyez-nous un message"
+                data-en="Send us a message">
+                Envoyez-nous un message
+            </h2>
+
+            <p data-fr="Présentez-nous votre projet ou votre demande. Notre équipe pourra examiner votre proposition."
+               data-en="Tell us about your project or request. Our team will be able to review your proposal.">
+                Présentez-nous votre projet ou votre demande. Notre équipe pourra examiner votre proposition.
+            </p>
+
+
+            <form class="contact-form"
+                  action="https://formsubmit.co/carlosmwanganzumbu@gmail.com"
+                  method="POST">
+
+                <input type="hidden"
+                       name="_subject"
+                       value="Nouveau message — CARLROY INTERNATIONAL">
+
+                <input type="hidden"
+                       name="_template"
+                       value="table">
+
+
+                <!-- NOM COMPLET -->
+
+                <div class="form-group">
+
+                    <label for="fullname"
+                           data-fr="Nom et prénom"
+                           data-en="Full name">
+                        Nom et prénom
+                    </label>
+
+                    <input type="text"
+                           id="fullname"
+                           name="Nom et prénom"
+                           placeholder="Votre nom complet"
+                           data-placeholder-fr="Votre nom complet"
+                           data-placeholder-en="Your full name"
+                           required>
+
+                </div>
+
+
+                <!-- ADRESSE EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email"
+                           data-fr="Adresse e-mail"
+                           data-en="Email address">
+                        Adresse e-mail
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           name="Email"
+                           placeholder="exemple@email.com"
+                           data-placeholder-fr="Votre adresse e-mail"
+                           data-placeholder-en="Your email address"
+                           required>
+
+                </div>
+
+
+                <!-- TYPE DE DEMANDE -->
+
+                <div class="form-group">
+
+                    <label for="requestType"
+                           data-fr="Type de demande"
+                           data-en="Request type">
+                        Type de demande
+                    </label>
+
+                    <select id="requestType"
+                            name="Type de demande"
+                            required>
+
+                        <option value=""
+                                data-fr="Choisir une option"
+                                data-en="Choose an option">
+                            Choisir une option
+                        </option>
+
+                        <option value="Partenariat"
+                                data-fr="Partenariat"
+                                data-en="Partnership">
+                            Partenariat
+                        </option>
+
+                        <option value="Collaboration"
+                                data-fr="Collaboration"
+                                data-en="Collaboration">
+                            Collaboration
+                        </option>
+
+                        <option value="Information"
+                                data-fr="Demande d'information"
+                                data-en="Information request">
+                            Demande d'information
+                        </option>
+
+                        <option value="Autre"
+                                data-fr="Autre demande"
+                                data-en="Other request">
+                            Autre demande
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- OBJET -->
+
+                <div class="form-group">
+
+                    <label for="subject"
+                           data-fr="Objet du message"
+                           data-en="Message subject">
+                        Objet du message
+                    </label>
+
+                    <input type="text"
+                           id="subject"
+                           name="Objet"
+                           placeholder="Objet de votre message"
+                           data-placeholder-fr="Objet de votre message"
+                           data-placeholder-en="Subject of your message"
+                           required>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message"
+                           data-fr="Votre message"
+                           data-en="Your message">
+                        Votre message
+                    </label>
+
+                    <textarea id="message"
+                              name="Message"
+                              rows="7"
+                              placeholder="Écrivez votre message ici..."
+                              data-placeholder-fr="Écrivez votre message ici..."
+                              data-placeholder-en="Write your message here..."
+                              required></textarea>
+
+                </div>
+
+
+                <!-- BOUTON ENVOYER -->
+
+                <button type="submit"
+                        class="btn btn-primary contact-submit"
+                        data-fr="Envoyer le message"
+                        data-en="Send message">
+                    Envoyer le message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLABORATION -->
+
+    <section class="section vision-section">
+
+        <div class="container">
+
+            <p class="section-label"
+               data-fr="03 — COLLABORATION"
+               data-en="03 — COLLABORATION">
+                03 — COLLABORATION
+            </p>
+
+            <h2 data-fr="Construisons quelque chose de grand."
+                data-en="Let's build something great.">
+                Construisons quelque chose de grand.
+            </h2>
+
+            <p data-fr="Nous sommes ouverts aux échanges avec les entrepreneurs, les entreprises, les institutions et les partenaires qui partagent notre ambition."
+               data-en="We welcome conversations with entrepreneurs, businesses, institutions and partners who share our ambition.">
+                Nous sommes ouverts aux échanges avec les entrepreneurs, les entreprises, les institutions et les partenaires qui partagent notre ambition.
+            </p>
+
+            <a href="index.html"
+               class="btn btn-primary"
+               data-fr="Retour à l'accueil"
+               data-en="Back to home">
+                Retour à l'accueil
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>CARLROY INTERNATIONAL — BUILDING THE FUTURE.</p>
+
+        <p>
+            © <span id="currentYear"></span>
+            CARLROY INTERNATIONAL
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+```
